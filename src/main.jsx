@@ -7,7 +7,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path:"/",
-    element: <App />
+    element: <App />,
+    errorElement: <h1>404 not found</h1>
+  },
+  {
+    path:"/Cards",
+    element: <h1>Nos Appartements</h1>
+  },
+  {
+    path:"/About",
+    element: <h1>A propos</h1>
   }
 ]);
 createRoot(document.getElementById('root')).render(
