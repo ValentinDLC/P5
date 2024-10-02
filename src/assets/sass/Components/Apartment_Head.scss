@@ -1,0 +1,133 @@
+@import "../mixins";
+@import "../variables";
+
+.apartment_head {
+  @extend .hostInfo-container;
+  font-family: $font-family-primary; // Montserrat
+
+  .apartment-rental_title {
+    h1,
+    h2 {
+      margin: 0;
+    }
+    h1 {
+      color: $primary-color;
+      @include font(36px, $font-medium);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      @include font(18px, $font-regular);
+      margin-bottom: 20px;
+    }
+
+    .apartments_tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      span {
+        background-color: $primary-color;
+        color: $tertiary-color;
+        padding: 5px 15px;
+        border-radius: 10px;
+        @include font(14px, $font-medium);
+      }
+    }
+  }
+
+  .apartment_owner {
+    @extend .rate-host-container;
+    &_details {
+      @extend .host-comp;
+      margin-bottom: 10px;
+
+      h3 {
+        @extend .host-name;
+        color: $primary-color;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .apartment_owner_badge {
+        @extend .hostPicture;
+      }
+    }
+
+    &_stars {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      span {
+        color: $primary-color;
+        font-size: 24px;
+        margin: 0 2px;
+
+        &.off {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.host-comp {
+  @include flex-end;
+  width: 100%;
+}
+
+.hostPicture {
+  display: flex;
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #c4c4c4;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 64px;
+    height: 64px;
+  }
+
+  & img {
+    @include WH-full;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.host-name {
+  @include flex-end;
+  width: 63px;
+  height: 66px;
+  text-align: right;
+  @include font(12px, 500);
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    @include font(18px, 500);
+  }
+}
+
+.rate-host-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.hostInfo-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}

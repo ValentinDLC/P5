@@ -1,0 +1,46 @@
+@import "../variables";
+@import "../mixins";
+
+.notfound {
+  @include flex-column;
+  align-items: center;
+  color: $primary-color;
+  margin: 22px 6%;
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-width: 24rem;
+    margin: 12rem 0 1rem 0;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    @include font(18px, $font-medium);
+    margin: 0 11%;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include font(36px, $font-medium);
+      margin: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    @include font(14px, $font-medium);
+    margin-top: 5rem;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include font(18px, $font-medium);
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration-line: underline;
+    }
+  }
+}
