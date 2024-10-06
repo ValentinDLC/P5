@@ -1,0 +1,114 @@
+@import "../variables";
+.ADarea {
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem;
+
+  @include xsmall {
+    gap: 1.25rem;
+    flex-direction: column;
+  }
+}
+
+.collapse-describe {
+  flex: 1;
+  position: relative;
+
+  .description {
+    padding: calc(10rem / 16) calc(20rem / 16) calc(10rem / 16) calc(15rem / 16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: calc(5rem / 16);
+    width: 100%;
+    height: 52px;
+    background-color: $color1;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    @include xsmall {
+      padding: calc(10rem / 16) calc(6rem / 16) calc(10rem / 16)
+        calc(10rem / 16);
+      font-size: calc(13rem / 16);
+      height: 30px;
+    }
+
+    img {
+      transition: transform 0.3s ease-in-out;
+
+      @include xsmall {
+        width: 1.25rem;
+      }
+
+      &.rotated {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &::after {
+    height: calc(10rem / 16);
+    content: "";
+    position: absolute;
+    background-color: $color2;
+    top: 47px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    @include xsmall {
+      top: 25px;
+    }
+  }
+
+  .about_describe {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+    background-color: $color2;
+    border-radius: calc(5rem / 16);
+    padding: 0 1.5rem;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &.visible {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 1.5rem;
+    }
+
+    p,
+    ul {
+      margin: 0;
+    }
+
+    p,
+    li {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: $color3;
+
+      @include xsmall {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
