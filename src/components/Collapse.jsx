@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../assets/sass/Components/Collapse.scss";
 import ArrowUp from "../assets/images/ArrowUp.svg";
 
-function Collapse({ title, content }) {
+function Collapse({ title, content, variant = "default" }) {
   const [isContentVisible, setContentVisible] = useState(false);
 
   const toggleContent = () => {
@@ -10,7 +10,7 @@ function Collapse({ title, content }) {
   };
 
   return (
-    <div className="collapse-describe">
+    <div className={`collapse-describe collapse-${variant}`}>
       <div className="description" onClick={toggleContent}>
         <span>{title}</span>
         <img
