@@ -57,6 +57,18 @@ $breakpoints: (
   }
 }
 
+@mixin flex($justify: flex-start, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 * {
