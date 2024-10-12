@@ -1,5 +1,6 @@
+import React from "react";
 import AboutBanner from "../components/Banner";
-import CollapseA from "../components/CollapseA";
+import Collapse from "../components/Collapse";
 import aproposData from "../Data/AboutCollapse.json";
 import { aboutBanner } from "../Data/BannerData";
 
@@ -9,10 +10,11 @@ function About() {
       <AboutBanner {...aboutBanner} />
       <div className="about_container">
         {aproposData.map((item) => (
-          <CollapseA
+          <Collapse
             key={item.id}
             title={item.titre}
             content={item.description}
+            variant="about"
           />
         ))}
       </div>
