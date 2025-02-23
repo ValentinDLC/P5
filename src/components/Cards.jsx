@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logementsData from "../data/logements.json"; // Importation directe des données
+import logementsData from "../Data/logements.json"; // Importation directe des données
 import "../assets/sass/Components/Cards.scss";
 
 function Cards() {
