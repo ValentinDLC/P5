@@ -21,12 +21,12 @@ const HeaderFooterLayout = () => {
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <HeaderFooterLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home />,
       },
       {
@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
         element: <Apartment />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />,
       },
       {
