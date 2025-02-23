@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/sass/Components/Apartment_Head.scss";
 import SuperStar from "../assets/images/star-rate.svg";
-import Star from "../assets/images/emptystar(1).svg";
+import Star from "../assets/images/emptyStar(1).svg";
 
 function Apartment_Head({
   selectedCards: { title, location, tags, host, rating },
