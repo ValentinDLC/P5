@@ -59,7 +59,7 @@ kasa/
 - Structurer et styliser l'application avec **SASS**
 
 ## Auteur
-- **[Votre Nom]** - Développeur Front-End
+- **Dardenne Valentin** - Développeur Front-End
 
 ## Remerciements
 Merci à Laura (CTO) et Paul (Designer) pour leur accompagnement sur ce projet.
