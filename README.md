@@ -64,7 +64,3 @@ kasa/
 ## Remerciements
 Merci à Laura (CTO) et Paul (Designer) pour leur accompagnement sur ce projet.
 
----
-
-_Ce projet s'inscrit dans le cadre d'une formation en développement web et constitue une réalisation présentée en soutenance._
-
